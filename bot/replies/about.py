@@ -1,0 +1,2 @@
+def reply(activity, bot, data):
+    bot.send_text_activity(activity, "Vardhaman College of Engineering was established in 1999 and is affliated with JNTUH. For more information about the college, visit: http://vardhaman.org")

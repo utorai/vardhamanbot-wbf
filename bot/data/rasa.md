@@ -1,0 +1,764 @@
+## intent:about
+- i want to know about the college
+- i wanna know about the college
+- tell me about the college
+- tell me about this college
+- i wanna know about vardhaman
+- i wanna know about this college
+- i want to know about this college
+- tell me about vardhaman
+- tell something about vardhaman
+- tell something about this college
+- tell me about your college?
+- give information about your college
+- give information about college
+- How good is vardhaman?
+- tell me about your college though
+- bro tell me about vardhaman
+- Is vardhaman a good college?
+- i wanna know about vardhman
+- what can you tell me about vardhaman college of engineering?
+- please tell me about the college
+
+## intent:attendance_prediction
+- What will my attendance be if I dont go tomorrow?
+- what will be my attendance if i dont go tomorrow?
+- how much will my attendance be if i don't go tomorrow
+- How much will I lose if I don't go tomorrow?
+- Should I go to college tomorrow?
+- I don't want to go to the college tomorrow
+- I want to skip college tomorrow
+- Don't wanna go
+- Howmuch attendance will I lose?
+- I want to skip college tomorrow
+- Should I come to the college tomorrow?
+- I dont feel like going to the college tomorrow
+- What will my attendance be if I go tomorrow?
+- I will not go tomorrow
+- I will not go to the college tomorrow
+- what will my attendance be?
+- what will be my attendance?
+- dont want to go to the college
+- dont want to go tomorrow
+- should I go tomorrow?
+- I should go tomorrow?
+- How much will I gain if I go tomorrow?
+- predict my attendance for tomorrow
+- attendance prediction
+- prediction of attendance
+- my attendance prediction
+- predict my attendance for tomorrow
+- my attendance prediction for tomorrow
+- dont feel like going to the college
+- dont feel like going tomorrow
+- how much will be my attendance if don't go tomorrow?
+- what will be my attendance if i take a leave tomorrow?
+- what will my attendance be if i take a leave tomorrow?
+- if i don't go tomorrow what will be my attendance?
+- if i dont go tomorrow how much will be my attendance?
+- if i take a leave what will be my attendance?
+- if i take a leave what will my attendance be?
+- tell me my attendance if i dont go tomorrow
+- tell me my attendance if i take leave tomorrow
+- i dont want to go tomorrow so what will be my attendance?
+- i wont be going tomorrow so what will be my attendance
+- predict my attendance if i dont go tomorrow
+- i dont want to go tomorrow so predict my attendance
+- what if i take a leave tomorrow?
+- what if i dont go to college tomorrow
+- i dont want to go tomorrow so predict my attendance
+- i dont want to go to college tomorrow so predict my attendance
+- i wanna know my attendance if i dont go tomorrow
+- i wanna know my attendance if take a leave tomorrow
+- my attendance if i dont go tomorrow
+- i am not going tomorrow so predict my attendance
+- what will be my attendance if i skip college tomorrow
+- i am going to skip college tomorrow so predict my attendance
+- i'm going to skip college tomorrow so what will be my attendance?
+- i am skipping college tomorrow so tell me my attendance
+- i am planning to skip college tomorrow so what will be my attendance?
+- how much will my attendance decrease if i dont go tomorrow
+- i want to know the decrease in my attendance if i dont go tomorrow
+- what will be my attendance if i am absent tomorrow
+- i'm skipping college tomorrow so predict my attendance
+- i am going to be absent tomorrow so how much will be my attendance
+- i'm going to be absent tomorrow so what will be my attendance
+- i am going to be absent tomorrow so predict my attendance
+
+## intent:appreciation
+- good
+- cool
+- nice
+- nice job
+- you are nice
+- beauty you are
+- you are awesome
+- love you
+- you are kind
+- great
+- You're cute!
+- well done
+- great job
+- best bot
+- best bot ever
+- u funny
+- beauty
+- you are so cool
+- you are cool
+- you are grateful
+- good job
+- best friend ever
+- You did good
+- You are the best
+- you did well, today
+- you are funny
+- good job
+- you are a good person
+- well played
+- your are beautiful
+- You're cool!
+- nice play
+- Good one pal!
+- LOVES!
+- wonderful
+- awesome
+- funny
+
+## intent:attendance
+- attendance
+- i wanna know my attendance
+- i want to know my attendance
+- whats my attendance?
+- i would like to know my attendance
+- attendance please
+- show me my attendance
+- what's my attendance
+- what is my attendance?
+- tell my attendance
+- tell me my attendance
+- whats my attendance dude?
+- what's my attendance bot
+- whats my attendance buddy?
+  
+## regex:authenticate
+- [0-9,A-Z]{10} #[A-Z,0-9]{4}
+
+
+## intent:authenticate 
+- 14881a05a2 #bhyg
+- 14881a05b7 #zhy2
+- 14881a345b #4yz3
+- 152831qa78 #a9h6
+- 15881a04yb #ax12
+- 16881a0554 #a9b7
+- 16881a0575 #zy89
+- 16881a0595 #1a2y
+- 16881a0596 #zm12
+- 16881a05a4 #av3y
+- 16881a05g5 #3y7z
+- 16881a05g5 #b678
+- 17662b047y #az57
+- 17881a05b3 #y1hz
+- 18881a0560 #zm23
+
+## intent:auth_error
+- 14881A1260
+- 14881A0587
+- 12881A0548
+- 11881A1346
+- 14881A0164s
+- 13881A0468+
+- 15884A25456
+## regex: auth_error
+- [0-9,A-Z]{10}[^\s]*
+
+## intent:closingrank
+- i wanna know the closing rank of [civil](department)
+- i wanna know the closing rank of [cse](department)
+- i wanna know the closing rank of [it](department)
+- i wanna know the closing rank of [mechanical](department)
+- i want to know the closing rank of [ece](department)
+- i want to know the closing rank of [mech](department)
+- tell me the closing rank of [civil](department)
+- tell me the closing rank of [cse](department)
+- tell me the closing rank of [ece](department)
+- tell me the closing rank of [it](department)
+- tell me the closing rank of [mechanical](department)
+- tell me the closing ranks of [ece](department)
+- what is the closing rank of [eee](department)
+- whats the closing rank for [cse](department)
+- what's the closing rank for [it](department)
+- whats the closing rank of [civil](department)
+- what's the closing rank of [computer science and engineering](department)
+- what's the closing rank of [cse](department)
+- whats the closing rank of [mechanical](department)
+- whats the closing ranks of [cse](department)
+
+## intent:gpa
+- gpa
+- cgpa
+- GPA
+- CGPA
+- i wanna know my cgpa
+- i wanna know my gpa
+- tell me my cgpa
+- whats my cgpa
+- tell me my gpa
+- what's my cgpa
+- CGPA?
+- what about my CGPA?
+- my CGPA?
+- what's my CGPA?
+- whats my gpa
+- i wanna know my 2nd semester sgpa
+- I wanna know my 2nd semester gpa
+- tell me my 1st semester gpa
+- I want to know my 3rd semester sgpa
+- Tell me my 1st sem gpa
+- Tell me my 2nd sem gpa
+- Tell me my 3rd sem gpa
+- Tell me my 4th sem gpa
+- 1st sem gpa
+- 2nd sem gpa
+- 3rd sem gpa
+- 4th sem gpa
+- 1st semester gpa
+- 2nd semester gpa
+- 3rd semester gpa
+- 4th semester gpa
+- Tell me my 5th semester gpa
+- 1st semester sgpa
+- 4th semester sgpa pls
+- 7th semester sgpa please
+- i wanna know my sgpa
+- whats my fifth semester sgpa
+- whats my first semester gpa
+- what's my first semester sgpa
+- tell me first semester gpa
+- tell me first semester sgpa
+- tell me my fourth semester sgpa
+- tell me third sem sgpa
+- tell me third semester sgpa
+
+## intent:greet
+- hey
+- hi
+- hello
+- yo
+- hola
+- hey there
+- hello there
+- morning
+- good morning
+- good afternoon
+- good evening
+- good night
+- start
+- begin
+- hello
+- heyy
+- Boot Up
+- get started
+- Hola
+- helo
+- hiii
+- good morning Batman
+- Hey you
+- helllloooo
+- begin
+- start
+- Howdie
+- Yo
+- Hello Stark !
+- Hey Captain !
+- Yoooo
+- Hello Tony
+- good morning
+- Morning !
+- hey
+- hi bot
+- Hi dude
+- hey bot
+- Hello my friend
+- Welcome !
+- Greetings!
+- hello there.
+- Howdy
+- morning
+- Hello there !
+- Well hello there
+- Yo buddy
+- Helloooo
+- Hi there
+- Hello
+- Goodmorning!
+- Welcome
+- good evening!
+- good night!
+- Yo
+- Hello, good afternoon !
+- good afternoon !
+- Good morning
+
+## intent:feeling
+- How are you ?
+- What's up mate ?
+- How is it going ?
+- How do you feel ?
+- You're alright ?
+- How are you buddy ?
+- How are things going for you ?
+- How are you feeling today buddy ?
+- Are you ok ?
+- Are you going well ?
+- Is everything alright with you ?
+- Are you alright ?
+- everything good ?
+- How's life ?
+- everything alright mate ?
+- feel good ?
+- hows life fella
+- All good ?
+- how are you doing Dave?
+- how are ou?
+- What's your mood today?
+- how's your day
+- How are you doing?
+- how are you, Stark?
+- how are you today
+- how do you do
+- Are you happy?
+- How you doin?
+- how are you
+- how are you doing Alfred?
+- Good and you?
+- how are yo
+- How are you, Bruce?
+- How is it going ?
+- How do you feel ?
+- You're alright ?
+- How are you buddy ?
+- How are things going for you ?
+- How are you feeling today buddy ?
+- Are you ok ?
+- Are you going well ?
+- Is everything alright with you ?
+- Are you alright ?
+- everything good ?
+- How's life ?
+- everything alright mate ?
+- feel good ?
+- All good ?
+- how are you doing wilson?
+- How are you doing?
+- how are you,steve rogers?
+- how are you today
+- how do you do
+
+## intent:thanks
+- thanks very much
+- i am thankful
+- million thanks
+- thanks a lot
+- thanks a ton
+- Thanks you too !
+- Thank you :)
+- Awesome thx
+- Thanks
+- Ty
+- Great, thank you
+- You're good
+- That's very kind!
+- Thank you very much
+- Nice thanks
+- ok thx
+- thx
+- Thnaks
+- ok thanks
+- thanks bot !
+- Thx mate
+- Awesome thanks
+- Perfect
+- Thanks for your help
+- cheers
+- Sweet, thanks!
+- Thank you buddy
+- I appreciate that.
+- Thanks Captain
+- I know. thank you
+- I really appreciate it
+- You saved my day!
+- cool ty
+- thnx
+- Great! Thanks!
+- thank
+- Thank you, Stark
+- thanks again!
+- nice, thank you
+- Thanks a lot
+- many thanks
+- Good to know. Thanks
+- :) Thanks
+- Nice thanks
+- Thankssssssssss
+- thanks for the help
+- thx dude
+- Thanks man
+- okay, thank you
+- Thank you for showing me that!
+- Thank you so much
+
+
+## intent: bye
+- I have to go
+- Have a good day
+- bye now
+- gtg
+- talk to you soon
+- got to go
+- I'm outa here
+- see u
+- Ok, bye
+- later
+- see you soon !
+- see you
+- have a nice day
+- goodnight then
+- byeeeee
+- best regards
+- See ya
+- so long
+- Catch you later
+- Adios!
+- Ok I have to go
+- Have a nice day !
+- see ya
+- byeee
+- I said bye
+- see yu
+- I'll see you
+- see you next time
+- great bye
+- Awesome see ya
+- byebye
+- Good night
+- See you later.
+- Cya.
+- Have a good day
+- bye
+- Excellent bye
+- Excellent bye-bye
+- Bye
+- Have a great weekend
+- see you
+- bye bye
+- Goodbye!
+- goodbye
+- good night
+
+## intent: ask_developer
+- Who exactly programmed you ?
+- What made you ?
+- Who made you
+- Who coded you ?
+- What is the name of the programmer that made you ?
+- What is the name of your programmer ?
+- I want to know who made you
+- Tell me the name of your maker now .
+- Name me the name of your maker
+- I would love to know who made you .
+- So if you're a bot, then that means that someone had to program you .
+- So if you're a robot, that means someone made you .
+- Tell me the name of your creator NOW
+- I want to speak to your creator .
+- Who created you ?
+- I would like to know the name of your maker
+- Tell me the name of your maker
+- Who is your maker
+- Where exactly did you come from ?
+- I need you to tell me what or who made you ?
+- Could you tell me who exactly programmed you ?
+- Who programmed you ?
+- Who's your father?
+- Please tell me how you were born
+- Say your creator's name
+- Talk about the one who created you
+- Tell me about your creator
+- Tell me more about you
+- Who created you?
+- Who made you?
+- Who's your creator?
+
+## intent: need_help
+- I need some help !
+- Can you help me ?
+- What do you do ?
+- How can I use you ?
+- How can you help me ?
+- What can you do ?
+- Help me
+- I want to know more about you 
+- Show me what you do
+- help
+- i need help
+- What can you do?
+- how does this work?
+- what should I do?
+- Please help me
+- What's your purpose?
+- I don't know what to do
+- help please!
+- Are you useless?
+- need guidance
+- could you help me
+- more help
+- show help
+- what is your usage
+- You're useless.
+- What are you doing?
+- What can I say?
+- I need some assistance
+- list help
+- not sure what to do here
+- are you useful?
+- What are you built for?
+- how to
+- What are your abilities?
+- need some guidance
+- What are my options
+- give me help
+- i am confused
+- Commands
+- assist me
+- I am lost
+- i cant find the way i need help 
+
+## intent:feeling
+- How are you ?
+- How is it going ?
+- How do you feel ?
+- You're alright ?
+- How are you buddy ?
+- How are things going for you ?
+- How are you feeling today buddy ?
+- Are you ok ?
+- Are you going well ?
+- Is everything alright with you ?
+- Are you alright ?
+- everything good ?
+- How's life ?
+- everything alright mate ?
+- feel good ?
+- All good ?
+- how are you doing Dave?
+- how are ou?
+- What's your mood today?
+- how's your day
+- How are you doing?
+- how are you, Stark?
+- how are you today
+- how do you do
+- Are you happy?
+- How you doin?
+- how are you
+- how are you doing Alfred?
+- Good and you?
+- how are yo
+- How are you, Bruce?
+- how ar eyou?
+- fine! How are you?
+- how areyou?t's up mate ?
+- How is it going ?
+- How do you feel ?
+- You're alright ?
+- How are you buddy ?
+- How are things going for you ?
+- How are you feeling today buddy ?
+- Are you ok ?
+- Are you going well ?
+- Is everything alright with you ?
+- Are you alright ?
+- everything good ?
+- How's life ?
+- everything alright mate ?
+- feel good ?
+- All good ?
+- how are you doing wilson?
+- How are you doing?
+- how are you,steve rogers?
+- how are you today
+- how do you do
+
+## intent: bye
+- I have to go
+- Have a good day
+- bye now
+- gtg
+- talk to you soon
+- got to go
+- I'm outa here
+- see u
+- Ok, bye
+- later
+- see you soon !
+- see you
+- have a nice day
+- goodnight then
+- byeeeee
+- best regards
+- See ya
+- so long
+- Catch you later
+- Adios!
+- Ok I have to go
+- Have a nice day !
+- see ya
+- byeee
+- I said bye
+- see yu
+- I'll see you
+- see you next time
+- great bye
+- Awesome see ya
+- byebye
+- Good night
+- See you later.
+- Cya.
+- Have a good day
+- bye
+- Excellent bye
+- Excellent bye-bye
+- Bye
+- K Bye
+- OK bye
+- hehe bye bye
+- Have a great weekend
+- see you
+- bye bye
+- Goodbye!
+- goodbye
+- good night
+
+## intent: whats_up
+- what's up
+- what are you doing?
+- whatsup
+- what's going on?
+- wassup
+- what are u doing
+- Whats up my man?
+- wassup bro
+- whatsup my man
+- What's up?
+- Whats up dude?
+- what's up my man
+- What's up dude?
+- what's up dude
+- whatsup mate
+- whatsup bot
+- sup bot?
+- sup?
+- what'sup
+- what else
+
+## intent: love
+- I love you
+- i love you
+- love you
+- i think i love you
+- i am in love with you
+- i like you
+- i kinda love you
+- i kinda like you
+- Hahah i kinda like you
+- Hahah I really like you
+- hey listen i love you
+- i love you for this
+- i kinda love you for this
+
+## intent: contribute
+- i want to contribute to the bot
+- i want to contribute
+- can i contribute to the bot?
+- can i contribute
+- i wanna contribute
+- can i contribute to your code?
+- i wanna contribute, can i?
+- hey can i contribute?
+
+
+## intent: repository
+- i wanna see your code
+- can i see your code?
+- i want to have a look at your code
+- can i have a look at your code?
+- where is your code?
+- i wanna have a look at your github repo
+- i want to see your github repository
+- can i check your code?
+- i want to check your code
+
+## intent: feeling_reply
+- i am fine 
+- i am fine too
+- i am good
+- i am great
+- fine
+- i am doing fine
+- i am doing good
+- i am ok
+- i am okay
+- i'm good
+- gud
+- i am gud
+- i am also fine
+- i am also happy
+- i am happy
+
+##intent: feeling_negreply
+- i am not well
+- i am not fine
+- i am not doing good
+- i am not doing well
+- i am suffering
+- not fine
+- not well
+- not good
+
+## intent: whoareyou
+- who are you
+- may i know who are you
+- i don't know who you are
+- what are you?
+- who are you?
+- who r u?
+
+## intent:timetable
+- i wanna know todays timetable
+- tell me monday's timetable
+- tell me todays timetable
+- what do i have today
+- what is my schedule
+- what is the timetable for today
+- what periods do i have on monday
+- what periods do i have today
+- whats my schedule
+- what's my schedule
+- whats my schedule for friday
+- what's my schedule today
+- what's my timetable
+- whats the schedule
+- what's the timetable for tomorrow
+- what's today's timetable
+
+## synonym: are
+- r
+- R
+
+## synonym: you
+-u
+-U
+
+## synonym: am
+-m
+-M

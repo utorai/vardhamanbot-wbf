@@ -1,0 +1,19 @@
+{
+    "name": "vardhamanbot",
+    "description": "This is a Rasa NLU based chatbot created by Utor AI that functions as a personal assistant to the students of Vardhaman College of Engineering.",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "98dc01e8-8d9a-432a-a76a-8ea3a62df9ee",
+            "appPassword": "xghsIVD353;@erwJFRQ22_^",
+            "endpoint": "http://0.0.0.0:8080/",
+            "id": "b127a080-fd2d-11e8-9f1b-f100ca2f1815",
+            "name": "vardhamanbot"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "path": "/home/sripravan/Projects/utor-ai/github/vardhamanbot/vardhaman.bot",
+    "overrides": null,
+    "secretKey": ""
+}
