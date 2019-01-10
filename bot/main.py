@@ -19,6 +19,7 @@ def start(activity):
 
 @bot.replies
 def reply(activity):
+    bot.send_typing_activity(activity)
     data = engine.parse(activity["message"]["text"])
     intent = data.get_intent()
     entities = data.get_entities()
@@ -27,7 +28,7 @@ def reply(activity):
     try:
         intent_handler = getattr(replies, intent)
         intent_handler.reply(activity, bot, data)
-    except (AttributeError, TypeError):
+    except Exception:
         replies.default.reply(activity, bot, data)
 
 tools.server.start(bot)

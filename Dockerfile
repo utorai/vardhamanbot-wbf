@@ -3,11 +3,15 @@ FROM utorai/botbase
 # Set work directory as xbot which is the work directory for bot base.
 WORKDIR /xbot
 
-# Copy the bot directory to the work directory.
-COPY . /xbot/vardhamanbot
+# Copy training utterances and rasa config
+COPY ./bot/data/rasa.md /xbot/vardhamanbot/bot/data/rasa.md
+COPY ./bot/config/rasa.yml /xbot/vardhamanbot/bot/config/rasa.yml
 
 # Train Rasa NLU for the desired intents.
 RUN pipenv run python -m rasa_nlu.train -c ./vardhamanbot/bot/config/rasa.yml --data ./vardhamanbot/bot/data/rasa.md -o models --fixed_model_name nlu --project vardhamanbot --verbose 
+
+# Copy the bot directory to the work directory.
+COPY . /xbot/vardhamanbot
 
 EXPOSE 8080
 
