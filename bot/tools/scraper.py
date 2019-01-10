@@ -75,3 +75,19 @@ class Scraper:
                     return float(attendance)
         else:
             raise Exception("User authentication required for this feature.")
+
+    def get_studentdata(self):
+        if self.authenticated:
+            studentdata = {}
+            response = self.session.get("http://studentscorner.vardhaman.org/student_information.php")
+            soup = BeautifulSoup(response.text,"html.parser")
+            table = soup.find_all("table")[2]
+            for tr in table.find_all('tr'):
+                if len(tr.find_all('th'))==1 and len(tr.find_all('td')) == 1:
+                    key = tr.find_all('th')[0].text.strip().replace(' ','').replace('-','').replace('/','').replace('(','').replace(')','')
+                    value = tr.find_all('td')[0].text.strip()
+                    studentdata[key] = value
+            return studentdata
+        else:
+            raise Exception("User authentication required for this feature.")    
+        

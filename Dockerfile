@@ -3,6 +3,9 @@ FROM utorai/botbase
 # Set work directory as xbot which is the work directory for bot base.
 WORKDIR /xbot
 
+#Install Dependencies
+RUN pipenv install --skip-lock azure-cosmosdb-table
+
 # Copy training utterances and rasa config
 COPY ./bot/data/rasa.md /xbot/vardhamanbot/bot/data/rasa.md
 COPY ./bot/config/rasa.yml /xbot/vardhamanbot/bot/config/rasa.yml
