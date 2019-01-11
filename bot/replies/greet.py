@@ -8,4 +8,4 @@ def reply(activity, bot, data):
         "Hey there!"
     ]
     response = random.choice(responses)
-    bot.send_text_activity(activity, response)
+    bot.send_rich_activity(activity, "https://media.giphy.com/media/T4gMNMn9qF5wQ/giphy.gif")

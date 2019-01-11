@@ -28,7 +28,8 @@ def reply(activity):
     try:
         intent_handler = getattr(replies, intent)
         intent_handler.reply(activity, bot, data)
-    except Exception:
+    except Exception as e:
         replies.default.reply(activity, bot, data)
+        print(e)
 
 tools.server.start(bot)

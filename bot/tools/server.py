@@ -40,14 +40,39 @@ class Bot:
         }
         return message_dict
 
+    def create_rich_activity(self, recipient_id, media_url):
+        message_dict = {
+            "messaging_type": "RESPONSE",
+            "recipient": {
+                "id": str(recipient_id)
+            },
+            "message": {
+                "attachment": {
+                    "type": "image",
+                    "payload": {
+                        "url": media_url,
+                        "is_reusable": True
+                    }
+                }
+            }
+        }
+        return message_dict
+
     def send_text_activity(self, activity, text):
         reply = self.create_reply_activity(activity["sender"]["id"], text)
         request = requests.post(
             "https://graph.facebook.com/v2.6/me/messages?access_token=" + self.access_token, json=reply)
         print(request.text)
-    
+
     def send_quick_reply_activity(self, activity, message, text):
-        reply = self.create_quick_reply_activity(activity["sender"]["id"], message, text)
+        reply = self.create_quick_reply_activity(
+            activity["sender"]["id"], message, text)
+        request = requests.post(
+            "https://graph.facebook.com/v2.6/me/messages?access_token=" + self.access_token, json=reply)
+        print(request.text)
+
+    def send_rich_activity(self, activity, media_url):
+        reply = self.create_rich_activity(activity["sender"]["id"], media_url)
         request = requests.post(
             "https://graph.facebook.com/v2.6/me/messages?access_token=" + self.access_token, json=reply)
         print(request.text)
@@ -91,6 +116,7 @@ async def handle_all_activity(request):
         return request.Response(code=200)
     else:
         return request.Response(code=404)
+
 
 def start(current_bot):
     global bot
