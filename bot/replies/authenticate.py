@@ -6,7 +6,6 @@ def reply(activity, bot, data):
     credentials = activity["message"]["text"].split(" ")
     rollno = credentials[0]
     wak = credentials[1]
-    print(rollno + " " + wak)
     if len(wak) > 5:
         bot.send_text_activity(activity, "Please check your roll no. and web access key again.")
         bot.send_text_activity(activity, "Enter roll no. and web access key seperated by a single space.")
@@ -18,7 +17,6 @@ def reply(activity, bot, data):
         studentdata = scraper.get_studentdata()
         studentdata["wak"] = wak
         studentdata["RowKey"] = activity["sender"]["id"]
-        print(studentdata.items())
         state.insertOrUpdateStudent(studentdata)
         bot.send_text_activity(activity, "Authentication Successful!")
     else:

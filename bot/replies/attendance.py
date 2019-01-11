@@ -5,7 +5,6 @@ from tools.state import State
 def reply(activity, bot, data):
     state = State()
     result = state.getStudent(activity["sender"]["id"])
-    print(activity["sender"]["id"])
     scraper = Scraper()
     if result:
         rollno = str(result['RollNumber'])
