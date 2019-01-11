@@ -1,15 +1,13 @@
 import random
 from tools.scraper import Scraper
-from tinydb import TinyDB, Query
+from tools.state import State
 
 def reply(activity, bot, data):
-    query = Query()
-    db = TinyDB('./db.json')
-    result = db.search(query.userid == activity["sender"]["id"])
+    state = State()
+    result = state.getStudent(activity["sender"]["id"])
     scraper = Scraper()
-    if len(result) > 0:
-        result = result[0]
-        rollno = str(result['rollno'])
+    if result:
+        rollno = str(result['RollNumber'])
         wak = str(result['wak'])
         scraper.authenticate(rollno, wak)
         attendance = scraper.get_attendance()
