@@ -90,4 +90,34 @@ class Scraper:
             return studentdata
         else:
             raise Exception("User authentication required for this feature.")    
-        
+    
+    def getResults(self,rollno,wak,exam_code="BT4R15MAY18"):
+        data = {
+                'rollno' : rollno,
+                'wak': wak,
+                'exam_code': exam_code,
+                'go': 'GO',
+            }
+        #BT5R15DEC18
+        response = self.session.post("http://results.vardhaman.org/all_exam_results_report_vcer15.php",data)
+        #print(response.text)
+        soup = BeautifulSoup(response.text,"html.parser")
+        table = soup.find_all("table")[1].find_all("tbody")[0]
+        trs = table.find_all("tr")
+        subjects  = trs[0:len(trs)-2]
+        res = []
+        #print("-----------------")
+        for tr in subjects:
+            tds = tr.find_all("td")[1:]
+            code = tds[0].text.strip()
+            name = tds[1].text.strip()
+            grade = tds[2].text.strip()
+            credit = tds[3].text.strip()
+            result = tds[4].text.strip()
+            res.append([code,name,grade,credit,result])
+            #add this subject into the subjects array
+        summary = trs[-2:]
+        totalcred = summary[0].find_all('td')[1].text.strip()
+        gpa = summary[1].find_all('td')[1].text.strip()
+        return (res,int(totalcred), float(gpa))
+        #print(table.decode_contents())
