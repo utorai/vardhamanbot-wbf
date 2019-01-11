@@ -63,6 +63,8 @@ class Bot:
         request = requests.post(
             "https://graph.facebook.com/v2.6/me/messages?access_token=" + self.access_token, json=reply)
         print(request.text)
+        if 'error' in request.json():
+            raise Exception
 
     def send_quick_reply_activity(self, activity, message, text):
         reply = self.create_quick_reply_activity(
@@ -70,12 +72,16 @@ class Bot:
         request = requests.post(
             "https://graph.facebook.com/v2.6/me/messages?access_token=" + self.access_token, json=reply)
         print(request.text)
+        if 'error' in request.json():
+            raise Exception
 
     def send_rich_activity(self, activity, media_url):
         reply = self.create_rich_activity(activity["sender"]["id"], media_url)
         request = requests.post(
             "https://graph.facebook.com/v2.6/me/messages?access_token=" + self.access_token, json=reply)
         print(request.text)
+        if 'error' in request.json():
+            raise Exception
 
     def send_typing_activity(self, activity):
         reply = {
@@ -87,6 +93,9 @@ class Bot:
         request = requests.post(
             "https://graph.facebook.com/v2.6/me/messages?access_token=" + self.access_token, json=reply)
         print(request.text)
+        if 'error' in request.json():
+            raise Exception
+        
 
     def handle_message_activity(self, activity):
         print(activity)

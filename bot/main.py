@@ -20,17 +20,17 @@ def start(activity):
 
 @bot.replies
 def reply(activity):
-    bot.send_typing_activity(activity)
-    data = engine.parse(activity["message"]["text"])
-    intent = data.get_intent()
-    entities = data.get_entities()
-    print(intent)
-    print(entities)
     try:
+        bot.send_typing_activity(activity)
+        data = engine.parse(activity["message"]["text"])
+        intent = data.get_intent()
+        entities = data.get_entities()
+        print(intent)
+        print(entities)
         intent_handler = getattr(replies, intent)
         intent_handler.reply(activity, bot, data)
-    except Exception as e:
-        replies.default.reply(activity, bot, data)
+    except Exception:
+        replies.default.reply(activity, bot, {})
         traceback.print_exc()
 
 tools.server.start(bot)
