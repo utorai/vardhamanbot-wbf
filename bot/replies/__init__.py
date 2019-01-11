@@ -3,5 +3,5 @@ from . import (
                 auth_error, authenticate, bye, closingrank, contribute,
                 default, feeling_negreply, feeling_reply, feeling, gpa,
                 greet, love, need_help, repository, start,
-                thanks, timetable, whats_up, whoareyou
+                thanks, timetable, whats_up, whoareyou, results
               ) 

@@ -661,6 +661,11 @@
 - what'sup
 - what else
 
+## intent: results
+- tell results
+- results
+- tell results
+
 ## intent: love
 - I love you
 - i love you
