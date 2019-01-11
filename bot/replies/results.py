@@ -22,7 +22,7 @@ def reply(activity, bot, data):
         print(str(result["Semester"]))
         current = "BT" + convert(str(result["Semester"])) + "R15" + "NOV18"
         print(current)
-        subjects, cred, gpa = scraper.getResults(rollno,wak)
+        subjects, cred, gpa = scraper.getResults(rollno,wak) #add current to the parameter
         response = ""
         for i in subjects:
             for j in i:
@@ -32,6 +32,25 @@ def reply(activity, bot, data):
         bot.send_text_activity(activity, response)
         bot.send_text_activity(activity, "Total Credits: " + str(cred))
         bot.send_text_activity(activity, "Gpa: " + str(gpa))
+        
+        if gpa >= 9.5:
+            responses = ["iamgonnacry, really, hurtmyfeelings, Clapping, telugu1"]
+        elif gpa >= 9.0:
+            responses = ["Winner, genius, mindblown, youaretheman, awesomesauce, minions, badass, proud, meeru, mahesh"]
+        elif gpa >= 8.0:
+            responses = ["Woah, whosawesome, WOW, fantastic, Mogambo, superabba, intelli"]
+        elif gpa >= 7.0:
+            responses = ["goodjob, groot, betterluck, deserve, control"]
+        elif gpa >= 6.0:
+            responses = ["barelysurviving, sarsarle, apnatimeaayega"]
+        elif gpa >= 5.0:
+            responses = ["iknowthatfeel, iknowtfeel, baymax, nextsem, rightinthefeels"]
+        elif gpa >= 4.0:
+            responses = ["doyouthink, laughing, howamisupposedtolive, tearsineyes, doomed, feels ,subject"]
+        elif gpa < 4.0:
+            responses = ["ohdear, mkalaadla, gfather, hug, crying, ritf, balayya"]
+        reply = random.choice(responses)
+        bot.send_text_activity(activity, reply)
     else:
         bot.send_text_activity(activity, "Authentication failed. Please message your rollno and web access key again.")
         bot.send_text_activity(activity, "Enter roll no. and web access key seperated by a single space.")
