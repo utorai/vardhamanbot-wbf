@@ -661,10 +661,30 @@
 - what'sup
 - what else
 
-## intent: results
-- tell results
-- results
-- tell results
+
+## intent:results
+- results please
+- i want to know my results
+- show me my results
+- get results
+- show results
+- check my results
+- 5th semester results
+- 3rd semester results
+- third semester results
+- 7th semester results
+- seventh semester results
+- i wanna know my results
+- result
+- results 
+- where is my result
+- tell me my result
+- display result
+- display results
+- show results
+- get my results
+- fifth semester results
+
 
 ## intent: love
 - I love you
