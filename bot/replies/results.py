@@ -19,10 +19,13 @@ def reply(activity, bot, data):
         wak = str(result['wak'])
         #Find the exam Code.
         #BT3R15NOV17
-        print(str(result["Semester"]))
         current = "BT" + convert(str(result["Semester"])) + "R15" + "NOV18"
         print(current)
-        subjects, cred, gpa = scraper.getResults(rollno,wak)
+        try:
+            subjects, cred, gpa = scraper.getResults(rollno,wak)
+        except Exception:
+            bot.send_text_activity(activity, "Not Yet! Hold your horses.")
+            return
         response = ""
         for i in subjects:
             for j in i:
