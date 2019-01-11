@@ -2,6 +2,7 @@ import tools.server
 import tools.nlu
 import json
 import replies
+import traceback
 
 try:
     with open('./vardhamanbot/bot/config/app.json') as app_config_file:
@@ -30,6 +31,6 @@ def reply(activity):
         intent_handler.reply(activity, bot, data)
     except Exception as e:
         replies.default.reply(activity, bot, data)
-        print(e)
+        traceback.print_exc()
 
 tools.server.start(bot)

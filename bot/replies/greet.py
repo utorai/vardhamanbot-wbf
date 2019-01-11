@@ -1,6 +1,7 @@
 import random
-
+from tools.facebook import getName
 def reply(activity, bot, data):
+    name = getName(activity["sender"]["id"])
     responses = [
         "Hi", 
         "Hi there!", 
@@ -8,4 +9,4 @@ def reply(activity, bot, data):
         "Hey there!"
     ]
     response = random.choice(responses)
-    bot.send_rich_activity(activity, "https://media.giphy.com/media/T4gMNMn9qF5wQ/giphy.gif")
+    bot.send_text_activity(activity, response + " " + name)
