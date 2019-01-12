@@ -22,7 +22,7 @@ def reply(activity, bot, data):
         current = "BT" + convert(str(result["Semester"])) + "R15" + "NOV18"
         print(current)
         try:
-            subjects, cred, gpa = scraper.getResults(rollno,wak)
+            subjects, cred, gpa = scraper.getResults(rollno,wak,current)
         except Exception:
             bot.send_text_activity(activity, "Not Yet! Hold your horses.")
             return
