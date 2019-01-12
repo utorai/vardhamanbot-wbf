@@ -776,6 +776,20 @@
 - what's the timetable for tomorrow
 - what's today's timetable
 
+## intent: laugh
+- hahaha
+- haha
+- hehe
+- hehehe
+- lol
+- rofl
+- so funny
+- funny
+- you are so funny
+- your humour is lit
+- 😂😂
+- 🤣🤣
+
 ## synonym: are
 - r
 - R
