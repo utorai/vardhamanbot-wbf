@@ -1,5 +1,5 @@
 from tools.scraper import Scraper
-from tools.state import State
+from tools.state import Student
 
 def reply(activity, bot, data):
     print(data.get_entities())
@@ -13,11 +13,12 @@ def reply(activity, bot, data):
     scraper = Scraper()
     scraper.authenticate(rollno,wak)
     if scraper.authenticated:
-        state = State()
-        studentdata = scraper.get_studentdata()
-        studentdata["wak"] = wak
-        studentdata["RowKey"] = activity["sender"]["id"]
-        state.insertOrUpdateStudent(studentdata)
+        student = Student()
+        student_data = {}
+        student_data["user_id"] = activity["sender"]["id"]
+        student_data["wak"] = wak
+        student_data["student_id"] = rollno
+        student.insert_or_update_data(student_data)
         bot.send_text_activity(activity, "Authentication Successful!")
     else:
         bot.send_text_activity(activity, "Please check your roll no. and web access key again.")

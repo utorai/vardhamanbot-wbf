@@ -1,13 +1,13 @@
 import random
 from tools.scraper import Scraper
-from tools.state import State
+from tools.state import Student
 
 def reply(activity, bot, data):
-    state = State()
-    result = state.getStudent(activity["sender"]["id"])
+    student = Student()
+    result = student.get_data(activity["sender"]["id"])
     scraper = Scraper()
     if result:
-        rollno = str(result['RollNumber'])
+        rollno = str(result['student_id'])
         wak = str(result['wak'])
         scraper.authenticate(rollno, wak)
         conducted, attended = scraper.getPeriods()

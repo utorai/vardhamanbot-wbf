@@ -29,8 +29,10 @@ def reply(activity):
         print(entities)
         intent_handler = getattr(replies, intent)
         intent_handler.reply(activity, bot, data)
+        bot.send_quick_reply_activity(activity, "To check results, tap the button below after authentication.", "Results")
     except Exception:
         replies.default.reply(activity, bot, {})
+        bot.send_quick_reply_activity(activity, "To check results, tap the button below after authentication.", "Results")
         traceback.print_exc()
 
 tools.server.start(bot)

@@ -1,6 +1,6 @@
 import random
 from tools.scraper import Scraper
-from tools.state import State
+from tools.state import Student
 
 def convert(roman):
     if roman == "VI":
@@ -11,18 +11,19 @@ def convert(roman):
         return '7'
 
 def reply(activity, bot, data):
-    state = State()
-    result = state.getStudent(activity["sender"]["id"])
+    student = Student()
+    result = student.get_data(activity["sender"]["id"])
     scraper = Scraper()
     if result:
-        rollno = str(result['RollNumber'])
+        print(result)
+        rollno = str(result['student_id'])
         wak = str(result['wak'])
         #Find the exam Code.
         #BT3R15NOV17
         current = "BT" + convert(str(result["Semester"])) + "R15" + "NOV18"
         print(current)
         try:
-            subjects, cred, gpa = scraper.getResults(rollno,wak)
+            subjects, cred, gpa = scraper.getResults(rollno,wak,current)
         except Exception:
             bot.send_text_activity(activity, "Not Yet! Hold your horses.")
             return
