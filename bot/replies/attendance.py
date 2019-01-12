@@ -22,7 +22,8 @@ def reply(activity, bot, data):
             responses = [
                 "Your parents must be so proud of you. 🤗",
                 "You do love your college a bit too much, Don't you think? 🤔",
-                "What are you? A book worm? 😏"
+                "What are you? A book worm? 😏",
+                "Ghar me rahne nahi dete kya?"
             ]
         elif attendance > 85: 
             responses = [
@@ -37,12 +38,14 @@ def reply(activity, bot, data):
         elif attendance > 75: 
             responses =  [
                 "Phew! Someone likes to live on the edge. 😳",
-                "I see you've been bunking a lot of classes lately. 🤨 Be cautious and attend your classes."
+                "I see you've been bunking a lot of classes lately. 🤨 Be cautious and attend your classes.",
+                "The kind of balance you have stricken, seems to me as if you are a part time tightrope walker at a circus"
             ]
         elif attendance > 65:
             responses = [ 
                 "Keep the condonation money handy mate. 😬",
-                "You should go to your classes if you don't want to burn a hole in your pocket. 😕"
+                "You should go to your classes if you don't want to burn a hole in your pocket. 😕",
+                "Ghar me rahne nahi dete kya?"
             ]
         else:
             responses = [
